@@ -1,7 +1,7 @@
 import AbstractView from '../framework/view/abstract-view.js';
 
 function createFiltersItemTemplate(filter, isChecked) {
-  const {type, count} = filter;
+  const {type} = filter;
   return (`
       <input
         id="filter-${type}"
@@ -12,7 +12,7 @@ function createFiltersItemTemplate(filter, isChecked) {
         ${isChecked ? 'checked' : ''}
       />
       <label class="trip-filters__filter-label" for="filter-${type}">
-      ${type} ${count}
+      ${type}
       </label>`);
 }
 
